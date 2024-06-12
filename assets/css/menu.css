@@ -1,0 +1,254 @@
+.menu {
+    transition: .4s ease-in .2s;
+}
+
+.menu-click {
+    transition: .4s ease-in .2s;
+}
+
+.menu-bg {
+    position: relative;
+}
+
+.menu-bg ion-icon {
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: #f1f1f1;
+    transition: .4s;
+    cursor: pointer;
+    padding: 30px;
+    z-index: 1;
+    display: block;
+    margin: 0 auto;
+}
+
+.second-menu {
+    display: flex;
+    grid-gap: 150px;
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    transition: .1s ease-out;
+}
+
+.second-menu::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    transition: .1s ease-out;
+    background: #00dcff;
+}
+
+.second-menu a {
+    padding: 7px 25px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    transform: .4s ease-in .1s;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.second-menu a::before,
+.second-menu a::after {
+    content: '';
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: -2;
+    transition: .1s ease-out;
+    background: #09091a;
+    box-shadow: inset 2px 2px 3px rgb(0 220 255),
+    inset -1px -2px 3px rgb(171 0 197);
+}
+
+.cube-menu {
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: .1s ease-out;
+}
+
+.icon-hover1,
+.icon-hover2,
+.icon-hover3,
+.icon-hover4 {
+    position: absolute;
+    top: 19%;
+    left: 22%;
+    opacity: 0;
+    animation: cube2 20s linear forwards infinite;
+    transition: .4s ease-out;
+}
+
+.icon-hover1 ion-icon,
+.icon-hover2 ion-icon,
+.icon-hover3 ion-icon,
+.icon-hover4 ion-icon {
+    font-size: 10rem;
+    font-weight: 500;
+    color: #f1f1f1;
+    cursor: pointer;
+    padding: 20px;
+    z-index: 1;
+}
+
+.new-menu {
+    position: absolute;
+    top: -100%;
+    left: -100%;   
+}
+
+
+.menu.active {
+    z-index: 1;
+}
+
+.menu.active .menu-click {
+    position: relative;
+    z-index: 2;
+}
+
+.menu.active .new-menu {
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    opacity: 1;
+    top: 0%;
+    left: 0%;
+    background: #09091a;
+}
+
+.menu.active .second-menu {
+    bottom: 10%;
+    transition: 1s ease-out;
+}
+
+.menu.active .second-menu::before {
+    width: 120%;
+    transition: 1.5s ease-out 1.3s;
+}
+
+.menu.active .cube-menu {
+    transform: scale(1) translateY(-100px);
+    transition: 2s ease-out;
+}
+
+.menu.active .second-menu a::before,
+.menu.active .second-menu a::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 1.5s ease-out;
+}
+
+.none {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width : 1650px)
+{
+
+}
+@media (max-width : 1500px)
+{
+
+}
+@media (max-width : 1350px)
+{
+
+}
+@media (max-width : 1200px)
+{
+    .second-menu
+    {
+        transform: translateX(-50%) scale(0.9);
+    }
+}
+@media (max-width : 1100px)
+{
+    .second-menu
+    {
+        transform: translateX(-50%) scale(0.8);
+    }
+    .menu.active .cube-menu {
+        transform: scale(0.9) translateY(-100px);
+    }
+}
+@media (max-width : 960px)
+{
+    .second-menu
+    {
+        transform: translateX(-50%) scale(0.75);
+        grid-gap: 100px;
+    }
+}
+@media (max-width : 788px)
+{
+    .menu.active .cube-menu {
+        transform: scale(0.8) translateY(-100px);
+    }
+    .second-menu
+    {
+        flex-direction: column;
+        grid-gap: 150px;
+    }
+    .second-menu
+    {
+        bottom: -7%;
+        left: -30%;
+    }
+    .menu.active .second-menu {
+        bottom: -7%;
+        transform: translateX(-50%) scale(0.65);
+        left: 15%;
+    }
+    .second-menu a:nth-child(2)
+    {
+        transform: translate(150px, -20px);
+    }
+    .second-menu a:nth-child(3)
+    {
+        transform: translate(150px, 20px);
+    }
+    .menu.active .cube-menu {
+        transform: scale(0.6) translateY(-400px);
+    }
+    .second-menu::before
+    {
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    .menu.active .second-menu::before {
+        width: 900%;
+        left: 50%;
+    }
+}
+@media (max-width : 545px)
+{
+    .menu.active .second-menu {
+        left: 20%;
+    }
+}
