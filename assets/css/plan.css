@@ -229,6 +229,37 @@
 }
 
 
+.scale1,
+.scale2,
+.scale3 {
+    transform: scale(1.2);
+    box-shadow: unset;
+    transition: .6s ease-out;
+}
+
+.scale2,
+.scale3 {
+    position: relative;
+    left: -41%;
+}
+
+.scale3 {
+    position: relative;
+    left: -80%;
+}
+
+.scale1 a,
+.scale2 a,
+.scale3 a {
+    opacity: 0;
+}
+
+
+
+
+
+
+
 
 
 

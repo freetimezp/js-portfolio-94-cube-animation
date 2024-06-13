@@ -156,9 +156,15 @@
     display: none;
 }
 
+.menu.active .second-menu.rot1 a:hover::before {
+    transform: translate(-50%, -50%) rotate(855deg);
+    transition: 10s ease-out;
+}
 
-
-
+.menu.active .second-menu.rot1 a:hover::after {
+    transform: translate(-50%, -50%) rotate(-855deg);
+    transition: 10s ease-out;
+}
 
 
 
