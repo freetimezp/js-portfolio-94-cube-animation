@@ -198,9 +198,135 @@ Reset3.onclick = function () {
 
 
 
+//scroll
+const TextAnimation1 = document.querySelectorAll(".scroll-text");
+const BoxCard = document.querySelectorAll(".box-card");
+const F1Box = document.querySelectorAll('.f1-box');
+const F3Box = document.querySelectorAll('.f3-box');
+const ScrollTopAnimation = document.querySelectorAll(".scroll-top");
+const CubeAbout = document.querySelector(".cube-bg");
 
+const ScrollOpacityAnimation = document.querySelectorAll(".scroll-opacity");
 
+const F1 = document.querySelectorAll(".f1");
+const F2 = document.querySelectorAll(".f2");
+const F3 = document.querySelectorAll(".f3");
 
+const Width = document.querySelectorAll(".scroll-width");
+
+window.addEventListener("scroll", checkBoxes);
+
+checkBoxes();
+
+function checkBoxes() {
+    const triggerBottom = (window.innerHeight / 4) * 2;
+
+    TextAnimation1.forEach((TextAnimation1) => {
+        const ScrollText = TextAnimation1.getBoundingClientRect().top;
+
+        if (ScrollText < triggerBottom) {
+            TextAnimation1.classList.add("show");
+        } else {
+            TextAnimation1.classList.remove("show");
+        }
+    });
+
+    BoxCard.forEach((BoxCard) => {
+        const ScrollBoxs = BoxCard.getBoundingClientRect().top;
+
+        if (ScrollBoxs < triggerBottom) {
+            BoxCard.classList.add("show");
+        } else {
+            BoxCard.classList.remove("show");
+        }
+    });
+
+    F1Box.forEach((F1Box) => {
+        const ScrollBox1 = F1Box.getBoundingClientRect().top;
+
+        if (ScrollBox1 < triggerBottom) {
+            F1Box.classList.add("show");
+        } else {
+            F1Box.classList.remove("show");
+        }
+    });
+
+    F3Box.forEach((F3Box) => {
+        const ScrollBox3 = F3Box.getBoundingClientRect().top;
+
+        if (ScrollBox3 < triggerBottom) {
+            F3Box.classList.add("show");
+        } else {
+            F3Box.classList.remove("show");
+        }
+    });
+
+    ScrollTopAnimation.forEach((ScrollTopAnimation) => {
+        const NewScroll = ScrollTopAnimation.getBoundingClientRect().top;
+
+        if (NewScroll < triggerBottom) {
+            ScrollTopAnimation.classList.add("show");
+        } else {
+            ScrollTopAnimation.classList.remove("show");
+        }
+    });
+
+    const ScrollCube = CubeAbout.getBoundingClientRect().top;
+
+    if (ScrollCube < triggerBottom) {
+        CubeAbout.classList.add("show");
+    } else {
+        CubeAbout.classList.remove("show");
+    }
+
+    ScrollOpacityAnimation.forEach((ScrollOpacityAnimation) => {
+        const ScrollOpacity = ScrollOpacityAnimation.getBoundingClientRect().top;
+
+        if (ScrollOpacity < triggerBottom) {
+            ScrollOpacityAnimation.classList.add("show");
+        } else {
+            ScrollOpacityAnimation.classList.remove("show");
+        }
+    });
+
+    F1.forEach((F1) => {
+        const ScrollF1 = F1.getBoundingClientRect().top;
+
+        if (ScrollF1 < triggerBottom) {
+            F1.classList.add("show");
+        } else {
+            F1.classList.remove("show");
+        }
+    });
+    F2.forEach((F2) => {
+        const ScrollF2 = F2.getBoundingClientRect().top;
+
+        if (ScrollF2 < triggerBottom) {
+            F2.classList.add("show");
+        } else {
+            F2.classList.remove("show");
+        }
+    });
+    F3.forEach((F3) => {
+        const ScrollF3 = F3.getBoundingClientRect().top;
+
+        if (ScrollF3 < triggerBottom) {
+            F3.classList.add("show");
+        } else {
+            F3.classList.remove("show");
+        }
+    });
+
+    Width.forEach((Width) => {
+        const ScrollWidth = Width.getBoundingClientRect().top;
+
+        if (ScrollWidth < triggerBottom) {
+            Width.classList.add("show");
+        } else {
+            Width.classList.remove("show");
+        }
+    });
+}
 
 
 

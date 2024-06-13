@@ -311,6 +311,86 @@
     color: #23ffc4;
 }
 
+.box-card {
+    scale: 0.8;
+    opacity: 0;
+    transition:  .8s ease;
+}
+.box-card.show {
+    scale: unset;
+    opacity: 1;
+}
+
+.f3-box,
+.f3 {
+    scale: 1.4;
+    opacity: 0;
+    z-index: -1;
+    transition: .8s ease;
+}
+
+.f1-box,
+.f1 {
+    scale: 1.4;
+    opacity: 0;
+    transition: .8s ease;
+}
+
+.f3-box.show,
+.f3.show {
+    scale: 1;
+    opacity: 1;
+    z-index: auto;
+    transition: .8s ease .3s;
+
+}
+
+.f1-box.show,
+.f1.show {
+    scale: 1;
+    opacity: 1;
+    transition: .8s ease .3s;
+}
+
+.f2 {
+    scale: 1.4;
+    opacity: 0;
+    transition: .8s ease;
+}
+.f2.show {
+    scale: 1;
+    opacity: 1;
+    transition: .8s ease .3s;
+}
+
+
+.scroll-top {
+    position: relative;
+    top: -40px;
+    opacity: 0;
+    transition: .8s ease;
+}
+.scroll-top.show {
+    top: 0px;
+    opacity: 1;
+}
+
+.cube-bg {
+    transition: .8s ease;
+    transform: translate(-50px, -50%) rotate(45deg) scale(0);
+}
+.cube-bg.show {
+    transform: translate(-50px, -50%) rotate(45deg) scale(1);
+}
+
+.scroll-opacity {
+    opacity: 0;
+    transition: .8s ease;
+}
+.scroll-opacity.show {
+    opacity: 1;
+
+}
 
 
 

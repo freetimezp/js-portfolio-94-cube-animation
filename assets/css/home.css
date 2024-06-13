@@ -345,6 +345,100 @@
 }
 
 
+.header {
+    animation: opacity 3s ease 2s forwards;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+}
+.opacity1 {
+    animation: opacity2 1s ease forwards;
+    opacity: 0;
+}
+.opacity2 {
+    animation: opacity2 1s ease 1s forwards;
+    opacity: 0;
+}
+.opacity3 {
+    animation: opacity2 1s ease 2s forwards;
+    opacity: 0;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacity2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.second-row {
+    left: 40%;
+    transform: translateX(-50%) scale(1.3);
+    animation: show2 3s ease 3s forwards;
+}
+
+@keyframes show2 {
+    0% {
+        left: 40%;
+        transform: translateX(-50%) scale(1.3);
+    }
+    100% {
+        left: 50%;
+        transform: translateX(0%) scale(1);
+    }
+}
+
+.some-text {
+    position: relative;
+    left: -150%;
+    animation: show3 3s ease 3s forwards;
+}
+
+@keyframes show3 {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+
+
+
+
+
+
+.scroll-text {
+    position: relative;
+    left: -150%;
+    transition: .7s ease-out;
+}
+
+.scroll-text.show {
+    left: 0;
+    transition: .7s cubic-bezier(0.24, 0.46, 0.45, 0.94);
+}
+
+
+
 
 
 
